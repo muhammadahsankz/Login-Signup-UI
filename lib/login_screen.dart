@@ -8,17 +8,20 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage('assets/images/login.jpg'),
-        ),
+        color: Colors.white,
+        // image: DecorationImage(
+        //   fit: BoxFit.cover,
+        //   image: AssetImage('assets/images/login.jpg'),
+        // ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(backgroundColor: Colors.transparent),
+        appBar: AppBar(backgroundColor: Colors.white),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 60,
@@ -95,26 +98,31 @@ class LoginScreen extends StatelessWidget {
                       filled: true,
                       hintText: 'Password',
                       border: OutlineInputBorder(
+                        
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
-                Text(
-                  'Forget Password',
-                  textAlign: TextAlign.end,
-                  style: TextStyle(
-                    fontFamily: 'Salsa',
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
+                Container(
+                  alignment: Alignment.centerRight,
+                  padding: EdgeInsets.only(right: 40),
+                  child: Text(
+                    'Forget Password',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Salsa',
+                      decoration: TextDecoration.underline,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
                   ),
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 50,
                 ),
                 ElevatedButton(
                   onPressed: () {},
@@ -125,6 +133,13 @@ class LoginScreen extends StatelessWidget {
                       'Login',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.pink),
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(200.0, 50.0),
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
                     ),
                   ),
                 ),

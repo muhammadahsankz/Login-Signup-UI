@@ -8,14 +8,15 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage('assets/images/login.jpg'),
-        ),
+        color: Colors.white,
+        // image: DecorationImage(
+        //   fit: BoxFit.cover,
+        //   image: AssetImage('assets/images/login.jpg'),
+        // ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(backgroundColor: Colors.transparent),
+        appBar: AppBar(backgroundColor: Colors.white),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -159,6 +160,13 @@ class SignUpScreen extends StatelessWidget {
                       'Signup',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.pink),
+                    ),
+                  ),
+                   style: ElevatedButton.styleFrom(
+                    fixedSize: Size(200.0, 50.0),
+                    backgroundColor: Colors.green.shade100,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
                     ),
                   ),
                 ),
